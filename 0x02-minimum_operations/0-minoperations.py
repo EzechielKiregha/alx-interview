@@ -1,29 +1,26 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-File:
-0x02-minimum_operations/0-minoperations.py
-This project was adopted from a fellow student
+In a text file, there is a single character H.
+    Your text editor can execute only two operations in this file:
+    Copy All and Paste.
+
 """
 
 
-def minOperations(n):
-    """
-    Calculates the fewest number of operations needed
-    """
-    # end_str = "H"
-    # copy_str = ""
+def minOperations(n : int) -> int:
+    """if n = 9
+    then the Number of operations will be 6
+    H => Copy All => Paste => HH => Paste =>HHH =>
+    Copy All => Paste => HHHHHH => Paste => HHHHHHHHH
 
-    # str_len = 1
-    # oper_total = 0
+    Args:
+        n (int): Given a number n, write a method that
+        calculates the fewest number of operations
+        needed to result in exactly n H characters in the file.
 
-    # while str_len < n:
-    #     if n % str_len == 0:
-    #         copy_str = end_str  # copy
-    #         oper_total += 1
-    #     end_str += copy_str     # paste
-    #     str_len = len(end_str)
-    #     oper_total += 1
-    # return oper_total
+    Returns:
+        int: If n is impossible to achieve, return 0
+    """
     if n < 2:
         return 0
     factor_list = []
